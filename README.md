@@ -1,8 +1,8 @@
-Using Random Forest Regression, Linear Models & Exploratory Data Analysis
+#Using Random Forest Regression, Linear Models & Exploratory Data Analysis
 
 This project analyzes the factors that influence NBA career longevity using player and season statistics from Kaggle. Through exploratory data analysis (EDA), feature engineering, and machine learning modeling, the project examines which rookie-year performance metrics best predict how long a player stays in the league.
 
-📌 Project Overview
+#Project Overview
 
 NBA players enter the league with immense performance variability—making career longevity difficult to predict with simple trends. This project builds an end-to-end pipeline to:
 
@@ -16,7 +16,7 @@ Evaluate model performance using appropriate regression metrics
 
 Ensure transparency and reproducibility across the entire process
 
-📂 Dataset
+#Dataset
 
 Source: Kaggle — NBA Player & Season Stats Dataset
 Contains player-level and season-level metrics including:
@@ -29,7 +29,7 @@ Career start/end years
 
 Target Variable: Number of seasons played (career longevity)
 
-🔍 Exploratory Data Analysis (EDA)
+#Exploratory Data Analysis (EDA)
 
 The EDA phase examined:
 
@@ -51,14 +51,14 @@ Many performance variables interact, making linear assumptions ineffective
 
 High variance in rookie data suggests the need for robust models
 
-🤖 Modeling Approach
+#Modeling Approach
 Models Used
 
 Random Forest Regression (primary model)
 
 Multilinear Regression (baseline comparison)
 
-Why Random Forest?
+##Why Random Forest?
 
 Random Forest was selected due to:
 
@@ -72,7 +72,7 @@ Natural handling of feature interactions
 
 Built-in feature importance ranking for interpretability
 
-Hyperparameter Tuning
+##Hyperparameter Tuning
 
 Tuned using GridSearchCV:
 
@@ -88,7 +88,7 @@ Fixed random seed for reproducibility
 
 All preprocessing steps stored in a reusable pipeline script
 
-Reproducibility & Transparency
+##Reproducibility & Transparency
 
 The entire workflow is:
 
@@ -98,9 +98,9 @@ The entire workflow is:
 ✔ Modularized so each step (EDA → preprocessing → modeling) is reproducible
 ✔ Version-controlled with Git
 
-📊 Evaluation & Metrics
+#Evaluation & Metrics
 
-Metrics used:
+##Metrics used:
 
 R² Score — variance explained
 
@@ -114,7 +114,7 @@ Examined residuals to ensure stability
 
 Evaluated feature importance rankings to understand key drivers of longevity
 
-Results Summary
+##Results Summary
 
 Random Forest outperformed multilinear regression on both R² and MAE, confirming:
 
@@ -124,7 +124,7 @@ Rookie performance metrics differ in importance
 
 Model generalization improved after tuning
 
-⭐ Key Findings
+#Key Findings
 
 Minutes Played (MP), Win Shares (WS), and PTS were top predictors of longevity
 
@@ -134,7 +134,7 @@ Nonlinear models capture complex player progression patterns significantly bette
 
 Predictive modeling can uncover overlooked drivers of sustainable NBA careers
 
-🧱 Tech Stack
+#Tech Stack
 
 Python
 
@@ -148,24 +148,7 @@ Jupyter Notebook
 
 Git/GitHub
 
-🚀 How to Run the Project
-git clone <repo-url>
-cd nba-career-longevity
-pip install -r requirements.txt
-jupyter notebook
-
-
-Run the notebooks in order:
-
-01_eda.ipynb
-
-02_preprocessing.ipynb
-
-03_modeling.ipynb
-
-04_evaluation.ipynb
-
-📎 Future Improvements
+#Future Improvements
 
 Add XGBoost and LightGBM models
 
